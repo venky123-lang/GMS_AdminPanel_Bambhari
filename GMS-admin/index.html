@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="login_header">
+    <h1 style="color: white;">GMS Admin Panel</h1>
+  </header>
+  <div class="login-main">
+    <div class="login-container">
+
+      <div class="brand-logo"><img src="img/garden_logo-removebg-preview.png" alt="" width="90px" height="90px"
+          style="margin-top: 5px;"></div>
+
+      <div class="brand-title"><b>Admin Login</b></div>
+      <div class="inputs">
+
+        <div>
+          <p>
+            <label class="login-label">E-mail</label>
+            <input type="text" name="email" value="" placeholder="Enter your email" class="login-input" id="email"
+              required />
+            <label class="login-label">Password</label>
+            <input type="password" name="password" value="" placeholder="Enter password" class="login-input" id="password" required />
+            <button onclick="login()" type="submit" name="submit" class="login-btn">SignIn</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

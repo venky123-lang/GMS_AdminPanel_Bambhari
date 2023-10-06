@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>GMS-Admin Dashboard</title>
+
+    <!-- Cloudinary API -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.10.3/cloudinary-core-shrinkwrap.min.js"></script>
+
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="grid-container">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+        <div class="header-left">
+          <span class="material-icons-outlined">search</span>
+        </div>
+        <div class="header-right">
+          <span class="material-icons-outlined">notifications</span>
+          <span class="material-icons-outlined">email</span>
+          <span class="material-icons-outlined">account_circle</span>
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <span class="material-icons-outlined">inventory</span> GMS Admin Panel
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="users1.html">
+              <span class="material-icons-outlined">how_to_reg</span> Registered Users
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="booked.html">
+              <span class="material-icons-outlined">fact_check</span> Booked Services
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="landscape.html">
+              <span class="material-icons-outlined">add_box</span> Add Landscape Designs
+            </a>
+          </li>
+          
+
+          <li class="sidebar-list-item">
+            <a href="services.html">
+              <span class="material-icons-outlined">add_box</span> Add Garden Services
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="projects.html">
+              <span class="material-icons-outlined">add_box</span> Upload Garden Projects
+            </a>
+          </li>
+          <button id="logout" onclick="logout()">
+            <span class="material-icons-outlined">logout</span> <b>Log out</b>
+          </button>
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      <main class="main-container">
+          
+        <h1>Garden projects</h1>
+
+            <div class="form_container">
+                <div>
+                    <h2 id="form-title">Add Garden Project</h2>
+
+                    <label for="title" id="project-name">Projects Name :</label>
+                    <input type="text" name="title" id="projectsName">
+
+                    <label for="time">Select </label>
+                   
+                    <label for="description" id="project-description">Project Description :</label>
+                    <input type="text" name="description" id="projectsdescription">
+                    
+                    <label for="time" id="project-time">Select time period of the project :</label>
+                    <select name="time" id="projectslink">
+                      <option value="">--select--</option>
+                        <option value="past">Past Project</option>
+                        <option value="presrnt">Present Project</option>
+                        <option value="future">Future Projects</option>
+                    </select>
+                    
+                    
+                    <label for="image" id="project-image">Project Image :</label>
+                    <input type="file" name="image" placeholder="choose file" id="projectsimage">
+
+
+                    <button onclick="addProjects()" id="submitbutton">Submit</button>
+                  </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/projects.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="./js/logout.js"></script>
+</body>
+
+</html>
